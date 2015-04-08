@@ -2,25 +2,23 @@
 
 Wraps the Sidr javascript lib for the Rails' Asset Pipeline.
 
-All the swag for this awesome lib goes out to [Alberto Varela][1] and [Jesper Josefsson][2].
+This lib goes out to [Alberto Varela][1] and [Jesper Josefsson][2] who did all the hard work to get this put together.  I just updated a couple of things so that I wouldn't have to click the button a thousand times to get it to work with Turbolinks in Rails 4.
 
-This has been updated to be used with Jquery.Turbolinks for Rails 4.
-
-## Installation
+## Get Set Up
 
 Add this line to your application's Gemfile:
 
-    gem 'slidemenu'
+    gem 'slidemenu', '~> 1.0.0'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
     $ gem install slidemenu
 
-## Usage
+## Use It
 
 Add the javascript to your javascript manifest:
 
@@ -31,16 +29,14 @@ Optionally add one of the included stylesheets to your CSS manifest:
     *= require jquery.sidr.light
     *= require jquery.sidr.dark
 
-That's all.
+If you are using Turbolinks in your app, you'll need to add the [jquery.turbolinks gem][3] to your Gemfile. Make sure to set up your javascript manifest will jquery.turbolinks before turbolinks.
 
-## Contributing
+		//= require jquery.turbolinks
+		//= require jquery.sidr
+		//= require turbolinks 
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
+That should do it.
 
 [1]:http://www.berriart.com/sidr/
 [2]:https://github.com/jesjos
+[3]:https://github.com/kossnocorp/jquery.turbolinks
