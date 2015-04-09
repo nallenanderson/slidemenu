@@ -37,6 +37,40 @@ If you are using Turbolinks in your app, you'll need to add the [jquery.turbolin
 
 That should do it.  Have fun.  Code snippets for headers coming soon...
 
+## Example
+
+Here is how I use it in my _header.html.erb files.
+
+<div class="navbar-header">
+        <button id="right-menu" class="navbar-toggle" data-toggle="collapse"  href="#sidr-right">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <%= link_to "#", root_path, class: "navbar-brand" %>
+      </div>
+
+      <div id="sidr-right">
+         <ul>
+            <li><%= link_to "Blog", blogs_path %></li>
+            <li><%= link_to "Courses", courses_path %></li>
+            <% if user_signed_in? %>
+            <% else %>
+              <li><%= link_to "Sign In", user_session_path %></li>
+            <% end %>
+            <% if user_signed_in? %>
+              <li><%= link_to "My Profile", edit_user_registration_path %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <% end %>
+         </ul>
+      </div>
+
+
+
 [1]:http://www.berriart.com/sidr/
 [2]:https://github.com/jesjos
 [3]:https://github.com/kossnocorp/jquery.turbolinks
