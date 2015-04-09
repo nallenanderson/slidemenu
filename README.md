@@ -41,8 +41,8 @@ That should do it.  Have fun.  Code snippets for headers coming soon...
 
 Here is how I use it in my _header.html.erb files.
 
-<div class="navbar-header">
-        <button id="right-menu" class="navbar-toggle" data-toggle="collapse"  href="#sidr-right">
+			<div class="navbar-header">
+        <button id="right-menu" class="navbar-toggle" data-toggle="collapse"  href="#rightSide">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -52,7 +52,7 @@ Here is how I use it in my _header.html.erb files.
         <%= link_to "#", root_path, class: "navbar-brand" %>
       </div>
 
-      <div id="sidr-right">
+      <div id="rightSide">
          <ul>
             <li><%= link_to "Blog", blogs_path %></li>
             <li><%= link_to "Courses", courses_path %></li>
