@@ -29,13 +29,13 @@ Optionally add one of the included stylesheets to your CSS manifest:
     *= require jquery.sidr.light
     *= require jquery.sidr.dark
 
-If you are using Turbolinks in your app, you'll need to add the [jquery.turbolinks gem][3] to your Gemfile. Make sure to set up your javascript manifest will jquery.turbolinks before turbolinks.
+If you are using Turbolinks in your app, you'll need to add the [jquery.turbolinks gem][3] to your Gemfile. Make sure to set up your javascript manifest with jquery.turbolinks before turbolinks.
 
 		//= require jquery.turbolinks
 		//= require jquery.sidr
 		//= require turbolinks 
 
-That should do it.
+That should do it.  Have fun.  Code snippets for headers coming soon...
 
 [1]:http://www.berriart.com/sidr/
 [2]:https://github.com/jesjos
