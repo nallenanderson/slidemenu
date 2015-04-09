@@ -12,7 +12,7 @@
   overflow-x: none;
   overflow-y: auto;
   /* Theme Settings */
-  font-family: "Roboto", tahoma, verdana, arial, sans-serif;
+  font-family: "Roboto", sans-serif!important;
   font-size: 15px;
   background: #333333;
   color: white;
