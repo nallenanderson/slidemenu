@@ -1,3 +1,4 @@
+
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/www\/sidr\/src\/scss\/sidr\/_base\.scss}line{font-family:\000033}}
 .sidr {
   /* Default Settings */
@@ -11,7 +12,7 @@
   overflow-x: none;
   overflow-y: auto;
   /* Theme Settings */
-  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-family: "Roboto", tahoma, verdana, arial, sans-serif;
   font-size: 15px;
   background: #333333;
   color: white;
