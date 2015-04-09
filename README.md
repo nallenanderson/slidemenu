@@ -35,41 +35,43 @@ If you are using Turbolinks in your app, you'll need to add the [jquery.turbolin
 		//= require jquery.sidr
 		//= require turbolinks 
 
-That should do it.  Have fun.  Code snippets for headers coming soon...
-
 ## Example
 
-Here is how I use it in my _header.html.erb files.
+Here is an example for how to use in a _header.html.erb (with Bootstrap 4).
 
-			<div class="navbar-header">
-        <button id="right-menu" class="navbar-toggle" data-toggle="collapse"  href="#rightSide">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+	<div class="navbar-header">
+    <button id="right-menu" class="navbar-toggle" data-toggle="collapse"  href="#rightSide">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <%= link_to "#", root_path, class: "navbar-brand" %>
+  </div>
 
-        <%= link_to "#", root_path, class: "navbar-brand" %>
-      </div>
+  <div id="rightSide">
+     <ul>
+        <li><%= link_to "Blog", blogs_path %></li>
+        <li><%= link_to "Courses", courses_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to "My Profile", edit_user_registration_path %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <% end %>
+     </ul>
+  </div>
 
-      <div id="rightSide">
-         <ul>
-            <li><%= link_to "Blog", blogs_path %></li>
-            <li><%= link_to "Courses", courses_path %></li>
-            <% if user_signed_in? %>
-            <% else %>
-              <li><%= link_to "Sign In", user_session_path %></li>
-            <% end %>
-            <% if user_signed_in? %>
-              <li><%= link_to "My Profile", edit_user_registration_path %></li>
-              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-            <% else %>
-              <li><%= link_to "Sign Up", new_user_registration_path %></li>
-            <% end %>
-         </ul>
-      </div>
+And don't forget to include the script.
 
+  $(function() {
+    $('#right-menu').sidr({
+      name: 'sidr-right',
+      side: 'right'
+    });
+  });
 
+That should do it.  Have fun.
 
 [1]:http://www.berriart.com/sidr/
 [2]:https://github.com/jesjos
