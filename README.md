@@ -1,8 +1,8 @@
 # Slidemenu for Rails
 
-Wraps the Sidr javascript lib for the Rails' Asset Pipeline.
+Create cool slider menus for the Rails' Asset Pipeline.
 
-This lib goes out to [Alberto Varela][1] and [Jesper Josefsson][2] who did all the hard work to get this put together.  I just updated a couple of things so that I wouldn't have to click the button a thousand times to get it to work with Turbolinks in Rails 4.
+[Alberto Varela][1] and [Jesper Josefsson][2] did all the hard work to get this put together.  I just updated a couple of things so that I wouldn't have to click the button a thousand times to get it to work with Turbolinks in Rails 4.  Use and enjoy.
 
 ## Get Set Up
 
@@ -65,7 +65,7 @@ Here is an example for how to use in a _header.html.erb (with Bootstrap 4).
 And don't forget to include the script.
 
     $(function() {
-      $('#right-menu').sidr({
+      $('#rightSide').sidr({
         name: 'sidr-right',
         side: 'right'
       });
