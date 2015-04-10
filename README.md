@@ -1,6 +1,6 @@
 # Slidemenu for Rails
 
-Create cool slider menus for the Rails' Asset Pipeline.
+Create cool off-screen slider menus for the Rails Asset Pipeline.
 
 [Alberto Varela][1] and [Jesper Josefsson][2] did all the hard work to get this put together.  I just updated a couple of things so that I wouldn't have to click the button a thousand times to get it to work with Turbolinks in Rails 4.  Use and enjoy.
 
@@ -37,7 +37,7 @@ If you are using Turbolinks in your app, you'll need to add the [jquery.turbolin
 
 ## Example
 
-Here is an example for how to use in a _header.html.erb (with Bootstrap 4).
+Here is an example for how to use in a _header.html.erb (with Bootstrap 3).
 
   	<div class="navbar-header">
       <button id="right-menu" class="navbar-toggle" data-toggle="collapse"  href="#rightSide">
@@ -52,12 +52,12 @@ Here is an example for how to use in a _header.html.erb (with Bootstrap 4).
     <div id="rightSide">
        <ul>
           <li><%= link_to "Blog", blogs_path %></li>
-          <li><%= link_to "Courses", courses_path %></li>
+          <li><%= link_to "Products", products_path %></li>
           <% if user_signed_in? %>
             <li><%= link_to "My Profile", edit_user_registration_path %></li>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <% else %>
-            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Sign In", new_user_registration_path %></li>
           <% end %>
        </ul>
     </div>
